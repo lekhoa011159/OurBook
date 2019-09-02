@@ -20,3 +20,10 @@ export function loginSuccess(output) {
     payload: { output },
   };
 }
+
+export function loginFailure(output) {
+  return {
+    type: AccountTypes.USER_LOGIN_FAILURE,
+    payload: { output },
+  };
+}

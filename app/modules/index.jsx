@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import PrivateRoute from 'components/routes/PrivateRoute';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { purple, green } from '@material-ui/core/colors';
@@ -14,11 +15,20 @@ const theme = createMuiTheme({
 
 class App extends Component {
   render() {
-    return <ThemeProvider theme={theme}>{this.renderContent()}</ThemeProvider>;
+    return (
+      <div>
+        <ThemeProvider theme={theme}>{this.renderContent()}</ThemeProvider>
+      </div>
+    );
   }
 
   renderContent = () => {
-    return routes.map((route, index) => <Route key={index} {...route} />);
+    return routes.map(route => {
+      if (route.private) {
+        return <PrivateRoute key={route.path} {...route} />;
+      }
+      return <Route key={route.path} {...route} />;
+    });
   };
 }
 

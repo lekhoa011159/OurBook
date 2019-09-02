@@ -2,6 +2,7 @@ import React from 'react';
 import { TextField, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import callbackHandlerEnums from 'constants/callbackHandler';
+import classnames from 'classnames';
 
 const styles = theme => ({
   input: {
@@ -18,13 +19,15 @@ class TextInput extends React.Component {
   };
 
   render() {
+    const { classes } = this.props;
+
     return (
       <TextField
         {...this.props.mainProps}
         margin="normal"
         value={this.props.value}
         onChange={this.handleChange}
-        className={this.props.classes.input}
+        className={classnames(classes.input)}
       />
     );
   }

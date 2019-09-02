@@ -15,6 +15,7 @@ const routes = [
   },
   {
     path: '/dashboard',
+    private: true,
     exact: false,
     component: Dashboard,
   },

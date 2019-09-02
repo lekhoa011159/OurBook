@@ -80,6 +80,7 @@ module.exports = {
     'redux-saga/yield-effects': 2,
     'require-yield': 0,
     'default-case': 0,
+    'react/no-did-update-set-state': 0,
   },
   settings: {
     'import/resolver': {

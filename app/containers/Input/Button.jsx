@@ -2,9 +2,11 @@ import React from 'react';
 import { Button, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
-const styles = {
-  button: {},
-};
+const styles = theme => ({
+  button: {
+    marginTop: theme.spacing(2),
+  },
+});
 
 class ButtonControl extends React.Component {
   render() {
