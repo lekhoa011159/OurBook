@@ -1,5 +1,5 @@
 import Homepage from './Homepage/Loadable';
-import SignupPage from './SignupPage/Loadable';
+import LoginPage from './LoginPage/Loadable';
 import Dashboard from './Dashboard/Loadable';
 
 const routes = [
@@ -9,9 +9,9 @@ const routes = [
     component: Homepage,
   },
   {
-    path: '/signup',
+    path: '/login',
     exact: false,
-    component: SignupPage,
+    component: LoginPage,
   },
   {
     path: '/dashboard',

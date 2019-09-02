@@ -80,17 +80,17 @@ class SignupForm extends React.Component {
           />
 
           <div className={this.props.classes.footer}>
-            <Button to="/signup" variant="outlined" color="primary">
-              Đăng Nhập
-            </Button>
-            <Typography>&nbsp; hoặc &nbsp;</Typography>
             <Button
               component={Link}
-              to="/signup"
-              variant="contained"
+              to="/login"
+              variant="outlined"
               color="primary"
             >
-              Tạo tài khoản
+              Tạo Tài Khoản
+            </Button>
+            <Typography>&nbsp; hoặc &nbsp;</Typography>
+            <Button variant="contained" color="primary">
+              Đăng Nhập
             </Button>
           </div>
         </form>
