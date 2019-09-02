@@ -18,10 +18,9 @@ import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
 
 // Import root app
-import App from 'containers/App';
+import App from 'modules';
 
 // Load the favicon and the .htaccess file
-import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess'; // eslint-disable-line import/extensions
 
 import configureStore from './configureStore';
@@ -55,7 +54,7 @@ if (module.hot) {
   // Hot reloadable React components and translation json files
   // modules.hot.accept does not accept dynamic dependencies,
   // have to be constants at compile-time
-  module.hot.accept(['containers/App'], () => {
+  module.hot.accept(['modules'], () => {
     ReactDOM.unmountComponentAtNode(MOUNT_NODE);
     render();
   });

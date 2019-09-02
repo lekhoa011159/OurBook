@@ -64,6 +64,7 @@ module.exports = {
     'no-use-before-define': 0,
     'prefer-template': 2,
     'react/destructuring-assignment': 0,
+    'react/prefer-stateless-function': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react/jsx-closing-tag-location': 0,
     'react/forbid-prop-types': 0,
