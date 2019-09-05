@@ -1,6 +1,6 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
-import { Types } from './constants';
 import RelationshipServices from 'services/Relationships';
+import { Types } from './constants';
 import { fetchRelationshipsDone } from './actions';
 
 function* handleFetchRelationships() {

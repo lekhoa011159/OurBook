@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable';
-import { Types } from './constants';
 import { mapRelationShipsToState } from 'utils/map';
+import { Types } from './constants';
 
 const initialState = fromJS({
   isLoading: false,

@@ -23,16 +23,14 @@ export const getData = (response, fallback) => {
 };
 
 export function mapRelationShipsToState(response) {
-  const relationships = response.map(relationship => {
-    return {
-      id: relationship._id,
-      imageUrl: relationship.image_url,
-      country: relationship.contry,
-      gender: relationship.gender,
-      firstName: relationship.first_name,
-      lastName: relationship.last_name,
-    };
-  });
+  const relationships = response.map(relationship => ({
+    id: relationship._id,
+    imageUrl: relationship.image_url,
+    country: relationship.contry,
+    gender: relationship.gender,
+    firstName: relationship.first_name,
+    lastName: relationship.last_name,
+  }));
 
   return fromJS(relationships);
 }
