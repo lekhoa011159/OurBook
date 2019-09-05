@@ -18,4 +18,13 @@ export default {
       'POST',
       params,
     ),
+  mapCookies: params =>
+    callApiWithoutAuth(
+      `${AppConfig.API_URI}/api/${AppConfig.API_VERSION}/get-cookies`,
+      'POST',
+      params,
+    ).then(res => {
+      const data = getData(res, {});
+      return data;
+    }),
 };

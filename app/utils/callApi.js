@@ -9,7 +9,7 @@ export function callApiWithAuth(url, method, params) {
     method,
     data: params,
     headers: {
-      Authorization: cookies.get('ob_token'),
+      Authorization: `bearer ${cookies.get('ob_token')}`,
     },
   });
 }

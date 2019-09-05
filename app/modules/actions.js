@@ -1,4 +1,4 @@
-import { AccountTypes } from './constants';
+import { AccountTypes, Types } from './constants';
 
 export function signup(user) {
   return {
@@ -24,6 +24,19 @@ export function loginSuccess(output) {
 export function loginFailure(output) {
   return {
     type: AccountTypes.USER_LOGIN_FAILURE,
+    payload: { output },
+  };
+}
+
+export function mapCookieToState() {
+  return {
+    type: Types.MAP_COOKIE_TO_STATE,
+  };
+}
+
+export function mapCookieToStateSuccess(output) {
+  return {
+    type: Types.MAP_COOKIE_TO_STATE_SUCCESS,
     payload: { output },
   };
 }

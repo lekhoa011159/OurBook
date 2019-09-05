@@ -1,5 +1,5 @@
 import { fromJS, Map } from 'immutable';
-import { AccountTypes } from './constants';
+import { AccountTypes, Types } from './constants';
 
 const initialState = fromJS({
   isLoading: false,
@@ -19,6 +19,13 @@ export default (state = initialState, action) => {
       return state
         .set('isLoading', false)
         .set('error', Map(action.payload.output));
+    case Types.MAP_COOKIE_TO_STATE:
+      return state.set('isLoading', true);
+    case Types.MAP_COOKIE_TO_STATE_SUCCESS:
+      return state
+        .set('isLoading', false)
+        .set('user', fromJS(action.payload.output));
+
     default:
       return state;
   }
